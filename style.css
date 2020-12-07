@@ -1,0 +1,17 @@
+#numbers-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(6,80px);
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#value {
+    margin-top: 30px;
+    text-align: center;
+}
