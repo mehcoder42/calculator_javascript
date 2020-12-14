@@ -1,17 +1,45 @@
-#numbers-container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3,80px);
-    grid-template-rows: repeat(6,80px);
+body{
+    background-color: darkcyan;
 }
 
-.number {
+#buttons-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(6,100px);
+}
+
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20%;
+    margin: 5px;
 }
 
-#value {
-    margin-top: 30px;
-    text-align: center;
+#ipsum {
+    width: 340px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 10px solid darkblue;
+}
+
+#storedValue {
+    position: absolute;
+    margin: 5px;
+    right: 0;
+    top: 0;
+}
+
+#currentValue {
+    position: absolute;
+    margin: 5px;
+    right: 0;
+    bottom: 0;
 }

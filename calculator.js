@@ -21,10 +21,10 @@ let operator = '';
 
 function pushNum() {
     if (operator === '') {
-        firstNum = document.getElementById('currentValue').value += Number(this.innerHTML);
+        firstNum = document.getElementById('currentValue').textContent += Number(this.innerHTML);
         firstNum = Number(firstNum);
     } else {
-        secondNum = document.getElementById('currentValue').value += Number(this.innerHTML);
+        secondNum = document.getElementById('currentValue').textContent += Number(this.innerHTML);
         secondNum = Number(secondNum);
     }
 }
@@ -42,8 +42,8 @@ function pushOperator() {
         } else if (this.innerHTML === '/') {
             operator = '/';
         }
-        ipsum = document.getElementById('storedValue').value = firstNum + operator;
-        document.getElementById('currentValue').value = "";
+        displayedValue = document.getElementById('storedValue').textContent = firstNum + operator;
+        document.getElementById('currentValue').textContent = "";
     }
 }
 
@@ -66,9 +66,10 @@ function operate() {
         default:
             alert('ERROR');
     }
-    ipsum += secondNum;
-    ipsum = document.getElementById('storedValue').value = ipsum;
-    document.getElementById('currentValue').value = result;
+    displayedValue += secondNum;
+    displayedValue = document.getElementById('storedValue').textContent = displayedValue;
+    document.getElementById('currentValue').textContent = result;
+    firstNum = result;
 }
 
 
@@ -76,8 +77,8 @@ function toClear() {
     firstNum = '';
     secondNum = '';
     operator = '';
-    document.getElementById('currentValue').value = "";
-    document.getElementById('storedValue').value = "";
+    document.getElementById('currentValue').textContent = "";
+    document.getElementById('storedValue').textContent = "";
 }
 
 const num1 = document.getElementById('num1');
